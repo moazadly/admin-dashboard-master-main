@@ -1,0 +1,203 @@
+.table {
+  margin: auto;
+}
+/* .table-container {
+  background-color: #0a1739;
+  border-radius: 15px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 0px 1px 0px;
+} */
+.table-container {
+  overflow-x: hidden;
+  max-width: 100%; /* Constrain to parent container's width */
+}
+hr {
+  border-color: #666;
+  margin: 0;
+}
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  /* table-layout: auto; */
+}
+.user-table th {
+  background-color: #0a1739;
+  font-weight: 500;
+}
+.user-table tbody {
+  width: 100%;
+}
+
+.user-table th,
+.user-table td {
+  padding: 15px 20px;
+  text-align: left;
+}
+.user-table th:first-child,
+.user-table td:first-child {
+  width: 20px; /* Set a fixed width for the first column */
+  max-width: 20px; /* Optional: Prevent it from expanding */
+  min-width: 20px; /* Optional: Prevent it from shrinking */
+  /* text-align: center; */
+  padding-right: 30px; /* Remove extra padding if needed */
+}
+.user-table th:nth-child(2),
+.user-table td:nth-child(2) {
+  width: 23%;
+}
+.user-table td {
+  font-weight: 400;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.status-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  width: fit-content;
+  box-shadow: 0px 0px 1px 0px;
+}
+
+.status-button.active {
+  background-color: #0b3639;
+  color: rgb(3, 171, 3);
+}
+
+.status-button.inactive {
+  background-color: #39425f;
+}
+.custom-checkbox {
+  appearance: none; /* Remove the default checkbox style */
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #666;
+  border-radius: 4px; /* Optional: for a rounded checkbox */
+  outline: none;
+  position: relative;
+}
+
+.custom-checkbox:checked {
+  background-color: #c240f6;
+  border-color: #c240f6; /* Optional: make the border match the background */
+}
+.custom-checkbox:checked::after {
+  content: "✔"; /* Unicode or plain text for checkmark */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px; /* Adjust size of the checkmark */
+  color: white; /* Color of the checkmark */
+}
+th .custom-checkbox:checked::after {
+  content: "–"; /* Unicode or plain text for checkmark */
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px; /* Adjust size of the checkmark */
+  font-weight: bold;
+  color: white; /* Color of the checkmark */
+}
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #29293d;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #444;
+}
+
+/* Default: All columns visible */
+.user-table th:nth-child(3),
+.user-table td:nth-child(3),
+.user-table th:nth-child(4),
+.user-table td:nth-child(4),
+.user-table th:nth-child(5),
+.user-table td:nth-child(5),
+.user-table th:nth-child(6),
+.user-table td:nth-child(6),
+.user-table th:nth-child(7),
+.user-table td:nth-child(7) {
+  display: table-cell;
+}
+/* Small screens: Hide Status */
+@media (max-width: 1250px) {
+  .user-table th:nth-child(7),
+  .user-table td:nth-child(7) {
+    display: none;
+  }
+  .user-table tr {
+    cursor: pointer;
+  }
+}
+/* Small screens: Hide Status */
+@media (max-width: 1080px) {
+  .user-table th:nth-child(6),
+  .user-table td:nth-child(6) {
+    display: none;
+  }
+  .user-table tr {
+    cursor: pointer;
+  }
+}
+/* Small screens: Hide Status */
+@media (max-width: 768px) {
+  .user-table th:nth-child(5),
+  .user-table td:nth-child(5) {
+    display: none;
+  }
+}
+
+/* Smaller screens: Hide Email */
+/* @media (max-width: 576px) {
+  .user-table th:nth-child(5),
+  .user-table td:nth-child(5) {
+    display: none;
+  }
+} */
+
+/* Even smaller screens: Hide Location */
+@media (max-width: 520px) {
+  .user-table th:nth-child(4),
+  .user-table td:nth-child(4) {
+    display: none;
+  }
+}
+
+/* Even smaller screens: Hide Location */
+@media (max-width: 480px) {
+  .user-table th:nth-child(3),
+  .user-table td:nth-child(3) {
+    display: none;
+  }
+  .user-table th:nth-child(2),
+  .user-table td:nth-child(2) {
+    width: 100px !important;
+  }
+}
+
+/* Smallest screens: Hide Phone */
+/* @media (max-width: 360px) {
+  .user-table th:nth-child(3),
+  .user-table td:nth-child(3) {
+    display: none;
+  }
+} */
