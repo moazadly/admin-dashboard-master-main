@@ -410,7 +410,7 @@ export default function SideBar(props) {
         sx={
           open
             ? {
-                display: { xs: "none", md: "block" },
+                position: { xs: "absolute", md: "static" },
                 p: { xs: "15px 24px 24px 24px", md: "0 24px 24px 24px" },
               }
             : {
